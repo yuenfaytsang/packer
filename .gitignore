@@ -1,5 +1,14 @@
-# Cache objects
+# Packer Cache objects
 packer_cache/
+
+# Local builds
+builds/
 
 # For built boxes
 *.box
+
+# For local ISO Images
+*.iso
+
+# local vagrant files
+.vagrant
