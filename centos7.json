@@ -1,6 +1,7 @@
 {
   "variables": {
-    "vm_version": ""
+    "vm_version": "",
+    "cloud-token": "{{ env `VAGRANT_CLOUD_TOKEN` }}"
   },
   "provisioners": [
     {
@@ -62,6 +63,7 @@
       },
       {
         "type": "vagrant-cloud",
+        "access_token": "{{user `cloud_token`}}",
         "box_tag": "yuenfaytsang/centos7",
         "version": "{{user `vm_version`}}"    
       }
