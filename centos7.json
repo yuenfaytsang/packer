@@ -59,6 +59,11 @@
       {
         "output": "builds/packer-centos7-x86_64.box",
         "type": "vagrant"        
+      },
+      {
+        "type": "vagrant-cloud",
+        "box_tag": "yuenfaytsang/centos7",
+        "version": "{{user `vm_version`}}"    
       }
     ]
   ]
