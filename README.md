@@ -15,13 +15,14 @@ The following software must be installed/present on your local machine before yo
 
   - [Vagrant](http://vagrantup.com/)
   - [VirtualBox](https://www.virtualbox.org/)
-  - Packer go binary included
+  - [Packer](https://www.packer.io/)
+  - [CentOS 7 Installation DVD](https://www.centos.org/) in packer Project Folder
 
 ## Usage
 
 Make sure all the required software is installed and available on you local system, then change into the directory containing the packer binary, and run:
 
-    $ ./packer build -var 'vm_version=1.0.0' centos7.json
+    $ packer build -var 'vm_version=1.0.0' centos7.json
 
 After a few minutes, Packer should tell you the box was generated successfully, and the box was uploaded to Vagrant Cloud.
 
@@ -29,7 +30,7 @@ After a few minutes, Packer should tell you the box was generated successfully, 
 account.
 Remove the `vagrant-cloud` post-processor from the Packer template to build the box locally and if you not wish to push it to Vagrant Cloud. You can omit the `version` variable, if not using the `vagrant-cloud` post-processor.
 
-    $ ./packer build centos7.json
+    $ packer build centos7.json
 
 ## Testing built boxes
 
