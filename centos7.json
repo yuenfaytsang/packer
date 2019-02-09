@@ -38,7 +38,7 @@
       "shutdown_command": "echo 'vagrant'|sudo -S /sbin/halt -h -p",
       "virtualbox_version_file": ".vbox_version",
       "guest_additions_path": "/tmp/VBoxGuestAdditions.iso",
-      "vm_name": "centos7",
+      "vm_name": "yuenfaytsang-centos7",
       "vboxmanage": [
         [
           "modifyvm",
@@ -58,7 +58,7 @@
   "post-processors": [
     [
       {
-        "output": "builds/packer-centos7-x86_64.box",
+        "output": "builds/yuenfaytsang-centos7.box",
         "type": "vagrant"        
       },
       {
